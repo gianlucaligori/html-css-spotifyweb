@@ -11,6 +11,10 @@
     --home: rgba(20,25,34,255);
     --left-nav: rgba(0,0,0,255);
     --player: rgba(40,40,40,255);
+    --white: rgba(255,255,255,255);
+    --text-home-icons: rgba(210,210,210,255);
+    --text-leftnav: rgba(210,210,210,255);
+
 }
 
 /* ROOT SIZES */
@@ -28,7 +32,7 @@
     --desktop-home-height:90vh;
 }
 
-/* MAIN LAYOUT */
+/* MAIN LAYOUT BOXES*/
 main {
     max-width: var(--desktop-main-width);
     height: var(--desktop-main-eight);
@@ -42,6 +46,10 @@ main {
     z-index: 1;
     top: 0;
     right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
 }
 
 .navleft {
@@ -52,6 +60,10 @@ main {
     z-index: 2;
     top: 0;
     left:0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
 }
 
 .home {
@@ -64,8 +76,6 @@ main {
     top: 0;
     right: 0;
     overflow-y: hidden;
-
-
 }
 
 .player {
@@ -77,6 +87,100 @@ main {
     bottom: 0;
     right: 0;
 }
+
+/* LAYOUT CONTENTS */
+
+
+/* ROW FIXED */
+
+.upgrade-a {
+    margin-right: 2rem;
+    color: var(--white);
+    background-color: var(--row-fixed);
+    font-size: .9rem;
+    border-radius: 30px;
+    border: 1px solid var(--text-home-icons);
+    padding: .7rem 2rem;
+    text-decoration: none;
+}
+
+/* NAVLEFT */
+
+
+.spotify-logo {
+    width: 170px;
+    padding-bottom: 3rem;
+}
+
+.options-nav1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-home-icons);
+}
+
+/* ICONE E TESTI NAVLEFT */
+.text-navleft {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    color: var(--text-home-icons);
+}
+
+.playlist-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.plus-icon {
+    padding: .5rem;
+    color: var(--left-nav);
+    background-color: var(--text-home-icons);
+    display: inline;
+}
+
+ul {
+    margin-top: 2rem;
+}
+
+.playlist-name {
+    list-style-type: none;
+    margin: .7rem 0;
+}
+
+.nav-ftr {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 5rem;
+}
+
+.dl-app,
+.dl-icon,
+.user-name {
+    margin-bottom: .5rem;
+}
+
+.dl-icon,
+.user-icon {
+    color: var(--text-home-icons);
+    display: inline;
+}
+
+.nav-left-user,
+.nav-left-dl {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
 
 
 
