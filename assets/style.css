@@ -4,3 +4,79 @@
     box-sizing: border-box;
 
 }
+/* ROOT COLORS */
+
+:root {
+    --row-fixed: rgba(8,11,18,255);
+    --home: rgba(20,25,34,255);
+    --left-nav: rgba(0,0,0,255);
+    --player: rgba(40,40,40,255);
+}
+
+/* ROOT SIZES */
+
+:root {
+    --desktop-main-width: 1400px;
+    --desktop-left-nav-width: 250px;
+    --desktop-row-fixed-width: calc(100% - 250px);
+    --desktop-home-width: calc(100% - 250px);
+    --desktop-player-width: 100%;
+
+    --desktop-left-nav-height: calc(100% - 10vh);
+    --desktop-main-height: 100vh;
+    --desktop-row-fixed-height: 10vh; 
+    --desktop-home-height:90vh;
+}
+
+/* MAIN LAYOUT */
+main {
+    max-width: var(--desktop-main-width);
+    height: var(--desktop-main-eight);
+    margin-inline: auto;
+}
+.row-fixed {
+    background-color: var(--row-fixed);
+    height: var(--desktop-row-fixed-height); 
+    width: calc(100% - 250px);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.navleft {
+    background-color: var(--left-nav);
+    width: var(--desktop-left-nav-width);
+    height: var(--desktop-left-nav-height);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left:0;
+}
+
+.home {
+    padding-top: 10vh;
+    width: calc(100% - 250px);
+    height: var(--desktop-home-height);
+    background-color: var(--home);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-y: hidden;
+
+
+}
+
+.player {
+    background-color: var(--player);
+    height: var(--desktop-row-fixed-height); 
+    width: var(--desktop-player-width);
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+}
+
+
+
