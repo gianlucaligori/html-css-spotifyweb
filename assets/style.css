@@ -20,12 +20,13 @@
 /* ROOT SIZES */
 
 :root {
+    /* Larghezze macro aree*/
     --desktop-main-width: 1400px;
     --desktop-left-nav-width: 250px;
     --desktop-row-fixed-width: calc(100% - 250px);
     --desktop-home-width: calc(100% - 250px);
     --desktop-player-width: 100%;
-
+    /* Altezze macro aree*/
     --desktop-left-nav-height: calc(100% - 10vh);
     --desktop-main-height: 100vh;
     --desktop-row-fixed-height: 10vh; 
@@ -38,6 +39,7 @@ main {
     height: var(--desktop-main-eight);
     margin-inline: auto;
 }
+
 .row-fixed {
     background-color: var(--row-fixed);
     height: var(--desktop-row-fixed-height); 
@@ -66,6 +68,7 @@ main {
     padding-left: 1.5rem;
 }
 
+
 .home {
     padding-top: 10vh;
     width: calc(100% - 250px);
@@ -75,7 +78,8 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    overflow-y: hidden;
+    overflow-y: scroll;
+
 }
 
 .player {
@@ -127,7 +131,7 @@ main {
     color: var(--text-home-icons);
 }
 
-.playlist-title {
+.playlist-h3 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     color: var(--white);
@@ -140,7 +144,7 @@ main {
     display: inline;
 }
 
-ul {
+.ul-pl {
     margin-top: 2rem;
 }
 
@@ -175,12 +179,94 @@ ul {
     align-items: center;
 }
 
+/* FINE LEFT NAV */
 
 
+/* INIZIO NAV BOX HOME-LIBRERIA */
+
+.nav-home {
+    margin-top: 3rem;
+    margin-inline: auto;
+	display: flex;
+    justify-content: center;
+}
+
+.ul-nav {
+    display: flex;
+}
+
+.nav-home li {
+
+    list-style: none;
+}
+
+.nav-home a{
+    margin-inline: 1rem;
+    text-decoration: none;
+    font-size: .8rem;
+    color: var(--text-home-icons);
 
 
+}
+
+/* FINE NAV BOX HOME-LIBRERIA */
+
+/* INIZIO CONTENUTO BOX HOME-LIBRERIA */
+
+.music-section {
+    margin-top: 3rem;
+    padding-inline: 3rem;
+}
 
 
+.wrapper {
+    margin-top: 3rem;
+	--cols: 6;
+	--gap: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap);
+}
+
+.album	{
+    margin-bottom: 5rem;
+	height: 200px;
+    aspect-ratio: 1/1;
+	flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+	/* flex: 0 0 calc((100% - 1 * 1rem) / 6); */
+}
+
+.album img {
+    width: 100%;
+}
+
+.album-name,
+.album-author {
+    color: var(--text-home-icons);
+    text-align: center;
+}
+
+.album-name {
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.album-author {
+    margin-top: .3rem;
+    font-size: .8rem;
+}
 
 
+.wrapper-h2 {
+    color: var(--text-home-icons);
+}
 
+.wrapper-h3 {
+    margin-top: .5rem;
+    font-size: .8rem;
+    color: var(--text-leftnav)
+}
+
+.pop-artist{
+    border-radius: 50%;
+    }
