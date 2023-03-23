@@ -90,6 +90,9 @@ main {
     z-index: 3;
     bottom: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
 }
 
 /* LAYOUT CONTENTS */
@@ -270,3 +273,90 @@ main {
 .pop-artist{
     border-radius: 50%;
     }
+
+    /* PLAYER */
+    
+
+.left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+}
+
+
+.author-name-play:hover,
+.song-title-play:hover,
+.function-icon:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    
+.song-title-play,
+.author-name-play {
+    margin-inline: 1rem;
+    color: var(--text-home-icons);
+    text-decoration: none;
+}
+
+.player-icon {
+    color: var(--white);
+}
+
+.left,
+.right {
+    width: 20%;
+}
+
+.left-icon,
+.right-icon{
+    margin: 0 .5rem;
+}
+
+.data-song-author{
+    margin-right: .8rem;
+}
+
+.song-cover{
+    width: 60px;
+}
+
+
+.song-cover:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+.player .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.player .center i{
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
+
+.song-progress #range{
+    width: 60%;
+    margin: .5rem 1rem;
+    vertical-align: middle;
+}
+
+
+.right{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+
+#volume{
+    width: 40%;
+} 
