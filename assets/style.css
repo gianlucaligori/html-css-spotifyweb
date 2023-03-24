@@ -159,6 +159,11 @@ main {
     color: #009b00;
 }
 
+.small-spotify-logo {
+    display: none;
+    margin-bottom: 1rem;
+}
+
 .options-nav1 {
     display: flex;
     align-items: center;
@@ -343,7 +348,6 @@ main {
     
 .song-title-play,
 .author-name-play {
-    margin-inline: 1rem;
     color: var(--text-home-icons);
     text-decoration: none;
 }
@@ -368,6 +372,7 @@ main {
 }
 
 .song-cover{
+    margin-right: .7rem;
     width: 60px;
 }
 
@@ -450,50 +455,134 @@ main {
 
 /* ----------------------------------- */
 
-/* XL - LARGE DESKTOP */
-@media screen and (max-width: 1600x) {
+/*LARGE DEKSTOP*/
+
+@media screen and (max-width: 1629px) {
+
     .wrapper {
-        --cols: 6;
-        --gap: 3rem;
-        display: flex;
-        gap: var(--gap);
-        flex-wrap: wrap ;
-        }
+    --cols: 6;
+    }
 }
 
-/* LG - DESKTOP */
-@media screen and (max-width: 1350px) {
-    .home {
-        background: rgb(126, 126, 255);
-    }
+/* DESKTOP */
+@media screen and (max-width: 1488px) {
+
 
     .wrapper {
     --cols: 5;
-    --gap: 3rem;
-    display: flex;
-    gap: var(--gap);
-    flex-wrap: wrap ;
     }
 }
 
 
-/* SM - SMARTPHONE */
-@media screen and (max-width: 480px) {
-    .home {
-        background: orange;
-    }
-}
+/* Big TABLET */
+@media screen and (max-width: 936px) {
 
-/* MD - TABLET */
-@media screen and (max-width: 768px) {
-    .home {
-        background: yellow;
-    }
 
     .wrapper {
         --cols: 4;
-        --gap: 3rem;
 
     }
 }
+
+/* MD TABLET */
+
+@media screen and (max-width: 809px) {
+
+
+    .wrapper {
+        --cols: 3;
+    }
+
+    .song-cover {
+        display: none;
+    }
+}
+
+/* SMALL TABLET */ 
+
+@media screen and (max-width: 681px) {
+
+
+    .wrapper {
+        --cols: 2;
+    }
+
+    .song-cover {
+        display: none;
+    }
+
+    .text-navleft {
+        display: none;
+    }
+
+    .navleft {
+        width: 70px;
+    }
+
+    
+    .home,
+    .row-fixed {
+        width: calc(100% - 70px);
+    }
+
+    .spotify-logo{
+        display: none;
+    }
+
+    .nav-ftr {
+        margin-top: 30rem;
+    }
+
+    .small-spotify-logo {
+        display: block;
+    }
+}
+    
+
+
+/* SM - SMARTPHONE */
+@media screen and (max-width: 601px) {
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .song-cover {
+        display: none;
+    }
+
+    
+    .spotify-logo{
+        display: none;
+    }
+
+    .small-spotify-logo {
+        display: block;
+    }
+    
+    
+    .options-nav1 {
+        width: 20%;
+    }
+    
+    .nav-ftr {
+        margin-top: 30rem;
+    }
+    
+    .text-navleft {
+        display: none;
+    }
+
+    .navleft {
+        width: 70px;
+    }
+
+
+    .home,
+    .row-fixed {
+        width: calc(100% - 70px);
+    }
+}
+
+
 
