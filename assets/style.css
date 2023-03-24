@@ -72,6 +72,7 @@ main {
 
 .home {
     padding-top: 10vh;
+    padding-bottom: 5vh;
     width: calc(100% - 250px);
     height: var(--desktop-home-height);
     background-color: var(--home);
@@ -155,6 +156,7 @@ main {
 .spotify-logo {
     width: 170px;
     padding-bottom: 3rem;
+    color: #009b00;
 }
 
 .options-nav1 {
@@ -237,10 +239,10 @@ main {
 
 .ul-nav {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-home li {
-
     list-style: none;
 }
 
@@ -264,17 +266,16 @@ main {
 
 
 .wrapper {
-    margin-top: 3rem;
 	--cols: 6;
 	--gap: 3rem;
 	display: flex;
-	flex-wrap: wrap;
 	gap: var(--gap);
+    flex-wrap: wrap ;
 }
 
 .album	{
-    margin-bottom: 5rem;
-	flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+    position: relative;
+    flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
 	/* flex: 0 0 calc((100% - 1 * 1rem) / 6); */
 }
 
@@ -289,7 +290,6 @@ main {
 }
 
 .album-name {
-    margin-top: .5rem;
     font-size: 1rem;
 }
 
@@ -300,11 +300,12 @@ main {
 
 
 .wrapper-h2 {
+    margin-bottom: 1rem;
     color: var(--text-home-icons);
 }
 
 .wrapper-h3 {
-    margin-top: .5rem;
+    margin-bottom: 1rem;
     font-size: .8rem;
     color: var(--text-leftnav)
 }
@@ -417,11 +418,21 @@ main {
 
 /* PROVA */
 
+
 .img-hidden {
-    width: 100%;
     position: relative;
-    filter: brightness(30%);    
+    width: 100%;
+    filter: brightness(60%);  
 }
+
+.play-button {
+    position: absolute;
+    filter: invert(1) brightness(90%) ; 
+    top: 0;
+    left: 0;
+    transform: scale(0.4);
+}
+
 
 .img-top {
     position: absolute;
@@ -431,19 +442,58 @@ main {
 
 .img-top:hover {
     opacity: 0;
+    cursor: pointer;
 
 }
 
-.icon-on-top{
-    position: absolute;
-    filter: invert(1);
-    top: 75px;
-    left: 75px;
-    font-size: 4rem;
-    
+
+
+/* ----------------------------------- */
+
+/* XL - LARGE DESKTOP */
+@media screen and (max-width: 1600x) {
+    .wrapper {
+        --cols: 6;
+        --gap: 3rem;
+        display: flex;
+        gap: var(--gap);
+        flex-wrap: wrap ;
+        }
 }
-.album {
-    position: relative;
-    margin-bottom: 4rem;
-    height: 400px;
+
+/* LG - DESKTOP */
+@media screen and (max-width: 1350px) {
+    .home {
+        background: rgb(126, 126, 255);
+    }
+
+    .wrapper {
+    --cols: 5;
+    --gap: 3rem;
+    display: flex;
+    gap: var(--gap);
+    flex-wrap: wrap ;
+    }
 }
+
+
+/* SM - SMARTPHONE */
+@media screen and (max-width: 480px) {
+    .home {
+        background: orange;
+    }
+}
+
+/* MD - TABLET */
+@media screen and (max-width: 768px) {
+    .home {
+        background: yellow;
+    }
+
+    .wrapper {
+        --cols: 4;
+        --gap: 3rem;
+
+    }
+}
+
